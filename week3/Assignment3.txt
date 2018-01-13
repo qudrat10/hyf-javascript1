@@ -1,0 +1,130 @@
+//1. Strings!
+
+let myString = "hello,this,is,a,difficult,to,read,sentence";
+console.log(myString);
+//  The commas make that the sentence is quite hard to read. Find a way to remove the comma's from the sting and replace them with a spaces
+console.log(myString.replace(/,/g," "));
+
+//2. Arrays!
+let favoriteAnimals = ['blowfish', 'capricorn', 'giraffe'];
+console.log(favoriteAnimals);
+//2.1 
+ favoriteAnimals.push("turtle");
+
+//2.2
+console.log(favoriteAnimals);
+
+//2.3 
+favoriteAnimals.splice(1,0,"meerkat");
+//2.4
+console.log("The 'meerkat' is added in 2nd index in the array:")
+
+//2.5
+console.log(favoriteAnimals);
+
+//2.6
+console.log( "The array has a length of: " + favoriteAnimals.length);
+
+//2.7 Remove "giraffe" from the array
+favoriteAnimals.splice(3,1)
+//2.8
+console.log(favoriteAnimals);
+
+
+//2.9
+//2.10
+
+var index=favoriteAnimals.indexOf("meerkat");
+console.log( "The item you are looking for is at index: "+ index);
+
+//1: creating function
+function calc( num1, num2, num3){
+  var sum= num1 +num2 +num3;
+  console.log( "The result of sum is: " + sum);
+}
+var result=calc(5, 7, 4);
+
+//2
+function carColor(color){
+  var  col=color;
+  console.log(col);
+}
+var carColValue=carColor("a red car"); 
+
+//2 OR... to run this code change the word "promt" to "prompt"
+function colorCar(color) {
+  color=promt("choose a car color : red, black, or silver");
+  switch(color){
+    case "red":
+      alert(" a " + color + " car");
+      break;
+    case "Red":
+      alert(" A " + color + " Car");
+      break;
+    case "black":
+        alert(" a " + color + " car");
+      break;
+    case "Black":
+       alert(" A " + color + " Car");
+      break;
+    case "silver":
+       alert(" a " + color + " car");
+      break;
+    case "Silver":
+      alert(" A " + color + " Car");
+      break;
+    default:
+      alert("This car color is not available! The available car colors are: red, black, and silver.");   
+}
+}
+colorCar();
+
+// 3
+var myFriend = {
+  name:"Kabuli",
+  age:22,
+  job:"web developer",
+  hoppy:"football"
+}
+
+function getObj(justObj){
+  for(var property in justObj);
+  console.log(property + ": " + justObj[property]);
+}
+var displayObj=getObj(myFriend);
+
+
+//4
+function vehicleType(vehicleColor, vehicleNum){
+  
+  if(vehicleColor=="blue" && vehicleNum==2)
+  {
+  console.log("a blue car");
+  }
+  else if(vehicleColor=="silver" && vehicleNum==1)
+  {
+  console.log("a silver motorbike");
+  }
+}
+var vehicleValue=vehicleType("blue", 3);
+//var vehicleValue=vehicleType("silver", 1);
+
+
+//5
+
+
+//6 
+function vehicleType(vehicleColor, vehicleNum, age){
+  
+  if(vehicleColor=="silver" && vehicleNum==1 && age==3)
+  {
+  console.log("a silver car");
+  }
+  else if(vehicleColor=="blue" && vehicleNum==2 && age==5)
+  {
+  console.log("a blue motorbike");
+  }
+}
+var vehicleValue=vehicleType("blue", 2, 5);
+//var vehicleValue=vehicleType("silver", 1, 3);
+
