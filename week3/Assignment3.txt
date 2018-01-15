@@ -1,3 +1,4 @@
+
 //1. Strings!
 
 let myString = "hello,this,is,a,difficult,to,read,sentence";
@@ -45,11 +46,14 @@ function calc( num1, num2, num3){
 var result=calc(5, 7, 4);
 
 //2
-function carColor(color){
-  var  col=color;
-  console.log(col);
+function colorCar(color){
+
+    console.log(color + " car");
 }
+
+colorCar("redCar");
 var carColValue=carColor("a red car"); 
+
 
 //2 OR... to run this code change the word "promt" to "prompt"
 function colorCar(color) {
@@ -95,36 +99,68 @@ var displayObj=getObj(myFriend);
 
 
 //4
-function vehicleType(vehicleColor, vehicleNum){
-  
-  if(vehicleColor=="blue" && vehicleNum==2)
-  {
-  console.log("a blue car");
-  }
-  else if(vehicleColor=="silver" && vehicleNum==1)
-  {
-  console.log("a silver motorbike");
-  }
+function vehicleType(color,code){
+    if(code == 1){
+       console.log("a "+color+ " car");
+       } else if (code ==2){
+       console.log("a "+color+ " motorbike"); 
+       }        
 }
-var vehicleValue=vehicleType("blue", 3);
-//var vehicleValue=vehicleType("silver", 1);
+vehicleType("blue",1);
 
 
 //5
+(3 === 3) ? console.log("true"):console.log("false")
 
 
 //6 
-function vehicleType(vehicleColor, vehicleNum, age){
-  
-  if(vehicleColor=="silver" && vehicleNum==1 && age==3)
-  {
-  console.log("a silver car");
-  }
-  else if(vehicleColor=="blue" && vehicleNum==2 && age==5)
-  {
-  console.log("a blue motorbike");
-  }
+function vehicle(color,code,age){
+   console.log("a"+color+" used car");
 }
-var vehicleValue=vehicleType("blue", 2, 5);
-//var vehicleValue=vehicleType("silver", 1, 3);
+vehicle ("blue",1,5);
 
+
+//7
+let vehicleList = ["motorbike","caravan","bike","volvo"];
+let thirdElement = vehicleList[2];
+
+//8
+console.log(thirdElement);
+
+//9
+function vehicle(color,code,age){
+  console.log("a"+color+" new caravan");
+}
+vehicle("green",1,5);
+
+//10
+var engines = ["motorbike","caravan","bike"];
+
+function advertisement (arguments) {
+   for (var i = 0; i < arguments.length; i++) {
+       console.log("Amazing Joe's Garage, we service cars, "+arguments[i] + ", "+ arguments[i+1] + " and "+ arguments[i+2]+".");
+           break;
+       }
+   }
+
+advertisement(engines);
+
+//11
+advertisement.push(["volvo"]);
+
+//12
+var obj={};
+
+
+//13 & 14
+var teachers = [{firstname:"Ghulam",language:"html"},{firstname:"Mohsin",language:"CSS"}];
+console.log("I am "+teachers[0].firstname+" and teach "+teachers[1].languages);
+//15
+  let x = [1,2,3];
+  let y = [1,2,3];
+    let z = y;
+if(x==y){
+  console.log(true);
+} else{
+  console.log(false);
+}
